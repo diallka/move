@@ -8,12 +8,13 @@ var details;
 var details2 = "";
 var km;
 var id;
+var idClient;
 function initMap() {
     details = "";
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 50.6075138, lng: 3.1546705},
-        zoom: 11
+        zoom: 10
     });
 
 
@@ -92,8 +93,8 @@ function initMap() {
 
 
         });
-
-        $("#details").html(details);
+        //Afficher/Masquer le details de tous les conducteurs
+        //$("#details").html(details);
 
     }
 
@@ -183,12 +184,11 @@ function detailler(id) {
                 + " Auto: <span style='color:orange'> " + objData2.marque_auto + " " + objData2.modele + " </span>" + " Places disponibles: " + objData2.nb_places_dispo
                 + "</br>Note: <span style='color:green'> " + parseInt(objData2.total_notation) / parseInt(objData2.nb_notes) + "/5 </span> "
                 + " </br>Prix/Km: " + objData2.prix_km + " euros"
-                + '</br><form action="" method="get" name="direction" id="direction"  >'
-                + '<br><label>Point de départ :</label>'
-                + '<input type="text" name="origin" id="origin">'
-                + '<br><br><label>Destination :</label>'
-                + '<input type="text" name="destination" id="destination">'
-                + '<br><br><input type="button" value="Calculer l\'itinéraire" onclick="calculate('+objData2.prix_km+','+objData2.id+')">'
+                 + '</br><h2>Estimez le prix de la course</h2>'
+                + '<form action="" method="get" name="direction" id="direction"  >'
+                + '<input type="text" name="origin" id="origin" placeholder="Point de départ">'
+                + '<br/><br/><input type="text" name="destination" id="destination" placeholder="Destination">'
+                + '<br><br><input type="button" value="Valider" onclick="calculate('+objData2.prix_km+','+objData2.id+')">'
                 + '</form><br><hr>'
                 + '<br><br><div id="recapitulatif"></div>'
                 + '<br><br><div id="panel"></div>'
@@ -301,7 +301,8 @@ function payer(id){
 
         // Adresse à laquelle la requête est envoyée
         //url: "payer_conducteur?id="+id ,
-        url: "payer_conducteur?id="+id ,
+        //Payer la commande depuis son espace perso
+        url: "espace_personnel_client?id="+id ,
 //         url: "payer_conducteur" ,
 //          data: '{"id": "' + id + '", "destination": "' + destination +'"}',
 //         data: {

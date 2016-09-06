@@ -42,11 +42,18 @@ public class ClientDAO {
         em.getTransaction().commit();
     }
     
-      public Client RecupererUnClient(int id) {
+      public Client RecupererUnClient(long id) {
         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
         Query query=em.createQuery("SELECT c FROM Client c WHERE c.id=:un");
         query.setParameter("un", id);
         return (Client)query.getSingleResult();
     }  
+
+    public Client recupererIdParLogin(String login) {
+         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        Query query=em.createQuery("SELECT c FROM Client c WHERE c.login=:login");
+        query.setParameter("login", login);
+        return (Client)query.getSingleResult();
+    }
     
 }

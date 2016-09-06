@@ -32,6 +32,14 @@ public class ClientService {
         // s'il n'existe pas on le crée
         dao.creerUtilisateur(client);
     }
+
+    public Client recupererIdParLogin(String login) {
+        return new ClientDAO().recupererIdParLogin(login);
+    }
+
+    public Client RecupererUnClient(long id) {
+        return new ClientDAO().RecupererUnClient(id);
+    }
     
     
 }

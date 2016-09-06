@@ -34,6 +34,10 @@ public class ConnexionClientServlet extends HttpServlet {
          //Récuperer params formulaire
         String login = req.getParameter("login");
         String mdp = req.getParameter("password");
+        
+        Client clt = new ClientService().recupererIdParLogin(login);
+        
+        req.getSession().setAttribute("idClient", clt.getId());
 
         //Récuperer l'utilisateur correspondant en BDD
         //new UtilisateurService().rechercheParLoginEtMdp(login, mdp);
