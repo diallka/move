@@ -1,0 +1,17 @@
+
+#map-canvas {width:40%;
+             height:60%;
+              margin-top: 5%;
+            }
+#panel {
+      
+        
+        width:40%;
+        height: 20%;
+        float:left;
+        z-index:5;
+        background-color: #fff;
+        padding: 15px;
+/*        border: 1px solid #999;*/
+  opacity:0.8
+    }
