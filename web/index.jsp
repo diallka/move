@@ -84,7 +84,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-                            <h1 class="brand-heading">Move Me!</h1>
+                            <h1 class="brand-heading">Move!</h1>
                             <p class="intro-text">Un clic, et je me déplace librement pour pas cher.</p>
                             <a href="#chauffeurs" class="btn btn-circle page-scroll">
                                 <i class="fa fa-angle-down animated"></i>
@@ -111,8 +111,8 @@
                         nous recherchons une nouvelle commande à proximité. Vous pouvez choisir 
                         de faire une pause ou de terminer votre journée quand vous le souhaitez, 
                         simplement en fermant l'application.</p>
-
-
+                    
+                    
 
 
                     <div class="col-lg-5 col-lg-offset-0" style="margin-left: 120%; margin-top: -125%">
@@ -125,15 +125,14 @@
 
         <!-- Download Section -->
         <section id="passagers" class="content-section text-center">
+            
             <div class="download-section">
                 <div class="container">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <h2>Déplacez-vous simplement,
-                            en un clic
-                            Partout, à tout instant</h2>
-                        <p>Des courses à tous les prix
-                            En toute occasion</p>
-                        <a href="inscription_client" class="btn btn-default btn-lg">Inscrivez vous dès aujourd'hui</a>
+                        <h2>Déplacez-vous simplement,en un clic Partout, à tout instant</h2>
+                        <p>Des courses à tous les prix En toute occasion</p>
+                   
+                        <a href="info_client" class="btn btn-default btn-lg">Cliquez ici pour obtenir plus d'infos</a>
                         <br/><br/><br/>
                         <a href="#" class="btn btn-circle page-scroll">
                             <i class="fa fa-angle-up animated"></i>
@@ -147,8 +146,8 @@
         <section id="contact" class="container content-section text-center">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Contact Start Bootstrap</h2>
-                    <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                    <h2>Contactez Yaobber</h2>
+                    <p>Ne hésitez pas à nous envoyer un courriel afin de fournir des commentaires sur nos services, nous donner des suggestions pour de nouveaux , ou juste dire bonjour!</p>
                     <p><a href="mailto:contact@yaobber.com">contact@yaobber.com</a>
                     </p>
                     <ul class="list-inline banner-social-buttons">

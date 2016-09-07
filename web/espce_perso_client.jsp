@@ -13,8 +13,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <title>Page d'accueil</title>
+        <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </head>
     <body >
+        
         <div id="title">  
             <div style="float: right">
                 - ${clt.email} &nbsp;<br/>
@@ -31,9 +40,9 @@
             
         
         <div id="historique">
-            <h1>Mon historique de commande</h1>
+            <h2>Mon historique de commande</h2>
             - Date: <br/>
-            - Details de la commande <br/>
+            - Details de la commande <br/><br/><br/><br/><br/>
         </div>
             
         <div id="details">

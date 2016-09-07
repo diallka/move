@@ -32,33 +32,29 @@ public class EspacePersoClientServlet extends HttpServlet {
         long id = (long) req.getSession().getAttribute("idClient");
         Client clt = new ClientService().RecupererUnClient(id);
         req.setAttribute("clt", clt);
-        
-        //String ClientJson = new ObjectMapper().writeValueAsString(clt);
-        //resp.getWriter().println(ClientJson);
-       
+
         req.getRequestDispatcher("espce_perso_client.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-          long idConducteur = Long.parseLong(req.getParameter("id"));
+        long idConducteur = Long.parseLong(req.getParameter("id"));
         String origine = req.getParameter("origin");
         String destination = req.getParameter("destination");
         Conducteur cond = new Conducteur();
         cond.setId(idConducteur);
-        
+
         long idClient = (long) req.getSession().getAttribute("idClient");
         Client client = new Client();
         client.setId(idClient);
-        
+
         Commande cmd = new Commande();
         cmd.setConducteur(cond);
         cmd.setClient(client);
         cmd.setAdresse_destination(destination);
         cmd.setDate(new Date());
-        
+
         new CommandeService().creerCommande(cmd);
     }
-    
-    
+
 }

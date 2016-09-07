@@ -13,10 +13,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Siging up</title>
          <link href="CSS/label.css" rel="stylesheet" type="text/css" />
-        <link href="CSS/css1.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
-        <div style="float: left; margin-left: 5%; margin-top: 5%">
+    <body >
+        <div style="float: left; margin-left: 15%; margin-top: 3%">
         
             <img  src="Images/img3.jpg" alt="passager"/> <br/>
             <h1>Commandez un Uber </h1> 
@@ -31,7 +30,7 @@
         
 
         </div>
-        <div style="float: right; margin-right: 5%">
+        <div style="float: right; margin-right: 15%">
             <form method="post">
             <div style="overflow: hidden;" align="center">
                 <a href=""><img src="Images/logo.png" alt="drive commerces"></a>

@@ -14,7 +14,7 @@ function initMap() {
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 50.6075138, lng: 3.1546705},
-        zoom: 10
+        zoom: 11
     });
 
 
@@ -110,7 +110,7 @@ function initMap() {
 function detailler(id) {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 50.6075138, lng: 3.1546705},
-        zoom: 13
+        zoom: 10
     });
 
 
@@ -176,7 +176,8 @@ function detailler(id) {
 
 
         details2 = '<div style="border:1px solid orange;display:inline-block;background-color:orange"><img src="Images/' + objData2.photo + '.png" alt="" />'
-                + '<button onclick="initMap()" style="position:absolute;top:20px;left:670px">Tous les conducteurs</button></div><br>'
+                + '<button onclick="initMap()" style="margin-right="20%">Afficher tous les chauffeurs</button></div><br/><br/>'
+                +'<b>Détails du conducteurs selectionné</b> <br/>'
                 + "Nom:<span style='color:#31B404'> " + objData2.nom + "</span>  Prenom: <span style='color:#31B404'>" + objData2.prenom + "</span><br>"
                 + " Age:<span style='color:red'> " + objData2.age + " ans </span> Date d'inscription:<span style='color:#31B404'> "
                 + new Date(objData2.date_inscription).getDate() + "/" + (new Date(objData2.date_inscription).getMonth() + 1) + "/"
@@ -184,14 +185,16 @@ function detailler(id) {
                 + " Auto: <span style='color:orange'> " + objData2.marque_auto + " " + objData2.modele + " </span>" + " Places disponibles: " + objData2.nb_places_dispo
                 + "</br>Note: <span style='color:green'> " + parseInt(objData2.total_notation) / parseInt(objData2.nb_notes) + "/5 </span> "
                 + " </br>Prix/Km: " + objData2.prix_km + " euros"
-                 + '</br><h2>Estimez le prix de la course</h2>'
+                 + '</br><h3>Estimez le prix de la course</h3>'
                 + '<form action="" method="get" name="direction" id="direction"  >'
                 + '<input type="text" name="origin" id="origin" placeholder="Point de départ">'
-                + '<br/><br/><input type="text" name="destination" id="destination" placeholder="Destination">'
-                + '<br><br><input type="button" value="Valider" onclick="calculate('+objData2.prix_km+','+objData2.id+')">'
-                + '</form><br><hr>'
-                + '<br><br><div id="recapitulatif"></div>'
-                + '<br><br><div id="panel"></div>'
+                + '<br/><br/><input type="text"  name="destination" id="destination" placeholder="Destination">'
+                + '<br><br><input type="button" class="btn btn-success btn-xs" value="Valider" onclick="calculate('+objData2.prix_km+','+objData2.id+')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn btn-danger btn-xs" type="reset" value="Effacer">'
+                 + '<br><div id="recapitulatif" style="margin-left:50%; margin-top:-17%"></div>'
+                + '</form><br>'
+              
+               
+//              + '<br><br><div id="panel"></div>'  affiche le detail du trajet
                
         ;
 
@@ -244,11 +247,11 @@ calculate = function (km, id) {
         directionsService.route(request, function (response, status) { // Envoie de la requête pour calculer le parcours
             if (status == google.maps.DirectionsStatus.OK) {
                 direction.setDirections(response);
-                var recap = "Distance: " + Math.ceil(response.routes[0].legs[0].distance.value / 1000) + " km<br />"
-                        + "Durée: " + Math.floor(response.routes[0].legs[0].duration.value / 3600) + " h " + Math.ceil((response.routes[0].legs[0].duration.value % 3600) / 60) + " min"
-                        + "<br />Prix total: " + Math.ceil((response.routes[0].legs[0].distance.value / 1000) * km)+" euro(s)"
-                        + '<br /><button onclick="reserver()">Reserver</button>'
-                        + '<br /><button id="payement" onclick="payer('+ id +')">Payer la course</button>'
+                var recap = "<b>Distance: </b> <a><b>" + Math.ceil(response.routes[0].legs[0].distance.value / 1000) + " km</b></a><br />"
+                        + "<b>Durée: </b> <a><b>" + Math.floor(response.routes[0].legs[0].duration.value / 3600) + " h " + Math.ceil((response.routes[0].legs[0].duration.value % 3600) / 60) + " min </b></a>"
+                        + "<br /><b>Prix total: </b> <a><b>" + Math.ceil((response.routes[0].legs[0].distance.value / 1000) * km)+" euro(s) </b></a>"
+                        + '<br /><br/> <button class="btn btn-info btn-xs" onclick="reserver()">Reserver</button>'
+                        + '&nbsp;&nbsp;<button class="btn btn-info btn-xs" id="payement" onclick="payer('+ id +')">Payer</button>'
                         + '<div id="resultpayer"></div>';
                         
                 
