@@ -187,7 +187,9 @@
     </div>
     
     <h3>Historique Commandes</h3>
-    
+    <c:forEach items="${cmd}" var="cd">
+        ${cd.date} ${cd.client.nom} ${cd.client.prenom} <br/>
+    </c:forEach>
 <!-- jQuery -->
 <script src="vendor/jquery/jquery.min.js"></script>
 

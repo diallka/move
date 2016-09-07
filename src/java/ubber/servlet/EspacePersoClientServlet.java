@@ -36,9 +36,12 @@ public class EspacePersoClientServlet extends HttpServlet {
         req.setAttribute("clt", clt);
         //***********************************************
         
+        //recuperer toutes les commandes d'un client inculant le chauffeur
         List<Commande>  mesCommandes = new CommandeService().listerCommandesParClient(id);
-        
         req.setAttribute("cmd", mesCommandes);
+        
+        //recuperer une commande par idclient
+        //Commande commandes = new CommandeService().recupererUneCommande(id);
 
         req.getRequestDispatcher("espce_perso_client.jsp").forward(req, resp);
     }
@@ -58,6 +61,7 @@ public class EspacePersoClientServlet extends HttpServlet {
         Commande cmd = new Commande();
         cmd.setConducteur(cond);
         cmd.setClient(client);
+        //cmd.setPrix();
         cmd.setAdresse_destination(destination);
         cmd.setDate(new Date());
 

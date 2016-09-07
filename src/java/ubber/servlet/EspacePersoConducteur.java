@@ -39,8 +39,9 @@ public class EspacePersoConducteur extends HttpServlet {
         //Mettre ceci dans la JSP      ${pageContext.request.userPrincipal.name}
         //long idConducteur = Long.parseLong(req.getParameter("id"));
        
-        //List<Commande>  mesCommandes = new CommandeService().listerCommandesParConducteur(idConducteur);
-        
+        //Recuperer Commandes d'un conducteur'
+        List<Commande>  mesCommandes = new CommandeService().listerCommandesParConducteur(id);
+        req.setAttribute("cmd", mesCommandes);
         
         req.getRequestDispatcher("espace_perso_conducteur.jsp").forward(req, resp);
     }

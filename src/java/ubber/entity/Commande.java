@@ -145,7 +145,7 @@ public class Commande implements Serializable {
 
     @Override
     public String toString() {
-        return "Commande{" +"date=" + date + "<br/> adresse_destination=" + adresse_destination + "<br/> arrive=" + arrive + "<br/> prix=" + prix + "<br/> commentaire_client=" + commentaire_client +'}';
+        return "Commande: <br/>" +"date=" + date + "<br/> adresse_destination=" + adresse_destination + "<br/> arrive=" + arrive + "<br/> prix=" + prix + "<br/> commentaire_client=" + commentaire_client +'}';
     }
 
   

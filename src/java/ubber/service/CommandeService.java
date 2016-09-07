@@ -22,8 +22,8 @@ public class CommandeService {
         new CommandeDAO().creer(cmd);
     }
 
-    public List<Commande> listerCommandesParConducteur(long idConducteur) {
-      return  new CommandeDAO().listerCommande(idConducteur);
+    public List<Commande> listerCommandesParConducteur(long id) {
+      return  new CommandeDAO().listerCommande(id);
     }
 
     public List<Commande> listerCommandesParClient(long id) {
@@ -32,6 +32,11 @@ public class CommandeService {
 
 //    public List<Commande> listerCommandes() {
 //        return new CommandeDAO().listerCommandes();
+//    }
+
+    //reuperer une commande
+//    public Commande recupererUneCommande(long id) {
+//        return new CommandeDAO().recupererUneCommande();
 //    }
    
     
