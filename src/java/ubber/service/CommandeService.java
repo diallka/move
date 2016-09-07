@@ -25,6 +25,14 @@ public class CommandeService {
     public List<Commande> listerCommandesParConducteur(long idConducteur) {
       return  new CommandeDAO().listerCommande(idConducteur);
     }
+
+    public List<Commande> listerCommandesParClient(long id) {
+        return new CommandeDAO().listerCommandesParClient(id);
+    }
+
+//    public List<Commande> listerCommandes() {
+//        return new CommandeDAO().listerCommandes();
+//    }
    
     
 }

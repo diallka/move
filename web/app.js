@@ -326,7 +326,7 @@ function payer(id){
         // La fonction à appeler si la requête n'a pas abouti
         error: function() {
             // J'affiche un message d'erreur
-            box.html("Désolé, Payement refusé.");
+            //box.html("Désolé, Payement refusé.");
         }
 
     });

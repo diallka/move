@@ -23,7 +23,7 @@
             <input type="text" name="login" id="login"/> <br/><br/>
             <label for="pass">Mot de passe</label>
             <input type="password" name="password" id="password"/> <br/><br/>
-            <input type="submit" value="Sign in" /> <br/><br/>
+            <input type="submit" value="Valider" /> <br/><br/>
             <div align="right"><a href="inscription_conducteur"><h2>S' inscrire?</h2></a></div>
         </form>
        

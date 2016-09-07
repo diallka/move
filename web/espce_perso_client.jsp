@@ -41,6 +41,8 @@
         
         <div id="historique">
             <h2>Mon historique de commande</h2>
+            ${cmd}
+            <br/>
             - Date: <br/>
             - Details de la commande <br/><br/><br/><br/><br/>
         </div>

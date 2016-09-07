@@ -15,7 +15,7 @@
          <link href="CSS/label.css" rel="stylesheet" type="text/css" />
     </head>
     <body >
-        <div style="float: left; margin-left: 15%; margin-top: 3%">
+        <div style="float: left; margin-left: 8%; margin-top: 5%">
         
             <img  src="Images/img3.jpg" alt="passager"/> <br/>
             <h1>Commandez un Uber </h1> 
@@ -30,7 +30,7 @@
         
 
         </div>
-        <div style="float: right; margin-right: 15%">
+        <div style="float: right; margin-right: 8%">
             <form method="post">
             <div style="overflow: hidden;" align="center">
                 <a href=""><img src="Images/logo.png" alt="drive commerces"></a>
@@ -51,8 +51,8 @@
                 <input type="text" name="login"/><br/><br/>
                 <label for="password">Mot de passe</label>
                 <input type="password" name="password"/><br/><br/>
-                <input type="submit" value="send"/>
-                <div align="right"><a href="connexion_client">Se connecter?</a></div>
+                <input type="submit" value="Envoyer"/>
+                <div align="right"><a href="connexion_client">SE CONNECTER ?</a></div>
 
         </form>
        

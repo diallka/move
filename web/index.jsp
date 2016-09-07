@@ -17,7 +17,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Move me! </title>
+        <title>Move! </title>
 
         <!-- Bootstrap Core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -129,7 +129,7 @@
             <div class="download-section">
                 <div class="container">
                     <div class="col-lg-8 col-lg-offset-2">
-                        <h2>Déplacez-vous simplement,en un clic Partout, à tout instant</h2>
+                        <h3>Déplacez-vous simplement,en un clic Partout, à tout instant</h3>
                         <p>Des courses à tous les prix En toute occasion</p>
                    
                         <a href="info_client" class="btn btn-default btn-lg">Cliquez ici pour obtenir plus d'infos</a>
@@ -146,9 +146,9 @@
         <section id="contact" class="container content-section text-center">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Contactez Yaobber</h2>
-                    <p>Ne hésitez pas à nous envoyer un courriel afin de fournir des commentaires sur nos services, nous donner des suggestions pour de nouveaux , ou juste dire bonjour!</p>
-                    <p><a href="mailto:contact@yaobber.com">contact@yaobber.com</a>
+                    <h2>Contactez NOUS !</h2>
+                    <p>Ne hésitez pas à nous envoyer un courriel afin de fournir des commentaires sur nos services, nous donner des suggestions pour de nouveelles fonctionnalités , ou juste dire Bonjour !</p>
+                    <p><a href="mailto:contact@yaobber.com">contact@move.fr</a>
                     </p>
                     <ul class="list-inline banner-social-buttons">
                         <li>

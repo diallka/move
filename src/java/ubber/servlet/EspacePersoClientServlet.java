@@ -8,6 +8,7 @@ package ubber.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,9 +30,15 @@ public class EspacePersoClientServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        //Recuperer l'id client en session afin de le renvoyer au map pour payer la commande
         long id = (long) req.getSession().getAttribute("idClient");
         Client clt = new ClientService().RecupererUnClient(id);
         req.setAttribute("clt", clt);
+        //***********************************************
+        
+        List<Commande>  mesCommandes = new CommandeService().listerCommandesParClient(id);
+        
+        req.setAttribute("cmd", mesCommandes);
 
         req.getRequestDispatcher("espce_perso_client.jsp").forward(req, resp);
     }

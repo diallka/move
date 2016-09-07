@@ -13,8 +13,8 @@
         <link href="CSS/label.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div style="float: left; margin-left: 15%; margin-top: 4%">
-        <h1>YAOBBER A BESOIN <br/><br/>
+        <div style="float: left; margin-left: 7%; margin-top: 11%">
+        <h1>MOVE A BESOIN <br/><br/>
             DE PARTENAIRES <br/><br/>
             COMME VOUS.</h1>
             <p>
@@ -25,7 +25,7 @@
             </p>
             <img src="Images/chauffeur_vtc.jpg" alt="chauffeur_vtc"/>
         </div>
-        <div style="float: right; margin-right: 15%">
+        <div style="float: right; margin-right: 7%">
             <form method="post">
             <div style="overflow: hidden;" align="center">
                 <a href=""><img src="Images/logo.png" alt="drive commerces"></a>

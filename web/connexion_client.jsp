@@ -23,8 +23,8 @@
             <input type="text" name="login" /> <br/><br/>
             <label for="pass">Mot de passe</label>
             <input type="password" name="password" /> <br/><br/>
-            <input type="submit" value="Sign in" /> <br/><br/>
-            <div align="right"><a href="inscription_client"><h2>S' inscrire?</h2></a></div>
+            <input type="submit" value="Valider" /> <br/><br/>
+            <div align="right"><a href="inscription_client"><h2>S' INSCRIRE ?</h2></a></div>
         </form>
        
     </body>

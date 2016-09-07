@@ -145,7 +145,8 @@ public class Commande implements Serializable {
 
     @Override
     public String toString() {
-        return "ubber.entity.Commande[ id=" + id + " ]";
+        return "Commande{" +"date=" + date + "<br/> adresse_destination=" + adresse_destination + "<br/> arrive=" + arrive + "<br/> prix=" + prix + "<br/> commentaire_client=" + commentaire_client +'}';
     }
-    
+
+  
 }

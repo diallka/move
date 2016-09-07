@@ -35,4 +35,17 @@ public class CommandeDAO {
 
     }
 
+    //Test Native Query pour afficher commandes par client.
+    public List<Commande> listerCommandesParClient(long id) {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        return em.createQuery("SELECT c FROM Commande c WHERE c.client.id =:idClient")
+                .setParameter("idClient", id)
+                .getResultList();
+    }
+
+//    public List<Commande> listerCommandes() {
+//        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+//        return em.createQuery("SELECT c FROM Commande c WHERE c.client.id = 603").getResultList();
+//    }
+
 }
