@@ -9,6 +9,8 @@ var details2 = "";
 var km;
 var id;
 var idClient;
+var prixTotal;
+var destination; 
 function initMap() {
     details = "";
 
@@ -210,27 +212,13 @@ function detailler(id) {
 
 
 }
-//Recuper client **************************************
-//   $.ajax({
-//        method: "POST",
-//        url: "reuperer_client?id=" + idClient
-//
-//    })
-//            .done(function (msg) {
-//                maFonction(msg);
-//            });
-//    function maFonction(data)
-//    {
-//        var myData = JSON.parse(data);
-//
-//    }
 
-//Fin recuperer client*********************************
+
 //---------Calculer trajet----------
 calculate = function (km, id) {
     origin = document.getElementById('origin').value; // Le point départ
     destination = document.getElementById('destination').value; // Le point d'arrivé
-
+   
     if (origin && destination) {
         var request = {
             origin: origin,
@@ -242,16 +230,20 @@ calculate = function (km, id) {
             },
             unitSystem: google.maps.UnitSystem.METRIC
         };
-
+        //Test variable destination
+         //destination = request.destination;
+         
         var directionsService = new google.maps.DirectionsService(); // Service de calcul d'itinéraire
         directionsService.route(request, function (response, status) { // Envoie de la requête pour calculer le parcours
             if (status == google.maps.DirectionsStatus.OK) {
                 direction.setDirections(response);
+                //Variable prix total
+                prixTotal = Math.ceil((response.routes[0].legs[0].distance.value / 1000) * km)
                 var recap = "<b>Distance: </b> <a><b>" + Math.ceil(response.routes[0].legs[0].distance.value / 1000) + " km</b></a><br />"
                         + "<b>Durée: </b> <a><b>" + Math.floor(response.routes[0].legs[0].duration.value / 3600) + " h " + Math.ceil((response.routes[0].legs[0].duration.value % 3600) / 60) + " min </b></a>"
-                        + "<br /><b>Prix total: </b> <a><b>" + Math.ceil((response.routes[0].legs[0].distance.value / 1000) * km)+" euro(s) </b></a>"
+                        + "<br /><b>Prix total: </b> <a><b>" + prixTotal +" euro(s) </b></a>"
                         + '<br /><br/> <button class="btn btn-info btn-xs" onclick="reserver()">Reserver</button>'
-                        + '&nbsp;&nbsp;<button class="btn btn-info btn-xs" id="payement" onclick="payer('+ id +')">Payer</button>'
+                        + '&nbsp;&nbsp;<button class="btn btn-info btn-xs" id="payement" onclick="payer('+ id + "," + prixTotal +' )">Payer</button>'
                         + '<div id="resultpayer"></div>';
                         
                 
@@ -287,7 +279,7 @@ function effacer() {
 
 /****PAYEMENT*****/
 
-function payer(id){
+function payer(id, prixTotal, destination){
 
  // Au clic sur le bouton #search je lance la fonction
 //$('#payement').on('click', function(){
@@ -305,12 +297,13 @@ function payer(id){
         // Adresse à laquelle la requête est envoyée
         //url: "payer_conducteur?id="+id ,
         //Payer la commande depuis son espace perso
-        url: "espace_personnel_client?id="+id ,
+        url: "espace_personnel_client?id="+id +"&prix="+prixTotal + "&dest="+ destination,
+        //url: "espace_personnel_client",
 //         url: "payer_conducteur" ,
 //          data: '{"id": "' + id + '", "destination": "' + destination +'"}',
 //         data: {
 //             id : "id",
-//             destination: "destination"
+//            // prixTotal: "prixTotal"
 //         },
         // Le délai maximun en millisecondes de traitement de la demande
        

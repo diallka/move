@@ -49,8 +49,12 @@ public class EspacePersoClientServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long idConducteur = Long.parseLong(req.getParameter("id"));
-        String origine = req.getParameter("origin");
-        String destination = req.getParameter("destination");
+        
+        float prix = Float.parseFloat(req.getParameter("prix"));
+       
+        
+        //String origine = req.getParameter("origin");
+        String destination = req.getParameter("dest");
         Conducteur cond = new Conducteur();
         cond.setId(idConducteur);
 
@@ -61,7 +65,7 @@ public class EspacePersoClientServlet extends HttpServlet {
         Commande cmd = new Commande();
         cmd.setConducteur(cond);
         cmd.setClient(client);
-        //cmd.setPrix();
+        cmd.setPrix(prix);
         cmd.setAdresse_destination(destination);
         cmd.setDate(new Date());
 

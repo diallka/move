@@ -260,11 +260,7 @@ public class Conducteur implements Serializable {
         return true;
     }
 
-    @Override
-    public String toString() {
-        return "Conducteur{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", email=" + email + ", genre=" + genre + ", photo=" + photo + ", date_inscription=" + date_inscription + ", disponible=" + disponible + ", position_latitude=" + position_latitude + ", position_longitude=" + position_longitude + ", login=" + login + ", password=" + password + ", adresse_demandee=" + adresse_demandee + ", marque_auto=" + marque_auto + ", modele=" + modele + ", nb_places_dispo=" + nb_places_dispo + ", prix_km=" + prix_km + ", total_notation=" + total_notation + ", nb_notes=" + nb_notes + ", commandes=" + commandes + '}';
-    }
-
+   
   
     
 }

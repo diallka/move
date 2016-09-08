@@ -27,6 +27,7 @@ public class PayerConducteurServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        
         long idConducteur = Long.parseLong(req.getParameter("id"));
+        System.out.println(idConducteur + "**************");
         String origine = req.getParameter("origin");
         String destination = req.getParameter("destination");
         Conducteur cond = new Conducteur();

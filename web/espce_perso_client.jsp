@@ -59,19 +59,11 @@
         <div id="map" > </div><br><br>
         
         <div id="historique">
-            <h2><a href="#">Mon historique de commande</a></h2>
-            <table class="table table small">
-                <th>Date</th>
-                <th>Prix</th>
-                <th>Chauffeur</th>
-                <c:forEach items="${cmd}" var="cd">
-                <tr>
-                    <td class="col-md-2">${cd.date}</td>
-                    <td class="col-sm-1">${cd.prix}</td>
-                    <td class="span1">${cd.conducteur.nom} ${cd.conducteur.prenom}</td>
-                </tr>
+            <h3>Mon historique de commande</h4>
+            <c:forEach items="${cmd}" var="cd">
+                <a href="">${cd.date}</a> <br/>
+                ${cd.adresse_destination}
                 </c:forEach>
-            </table>
              
            
         </div>
@@ -84,7 +76,18 @@
         <!-- <div id="panel" style="position: absolute;top: 750px;left: 920px;"></div>-->
         <div id="reponse" >${reponse}</div>
 
-
+        <table class="table table small">
+                <th>Date</th>
+                <th>Prix</th>
+                <th>Chauffeur</th>
+                <c:forEach items="${cmd}" var="cd">
+                <tr>
+                    <td class="col-md-2">${cd.date}</td>
+                    <td class="col-sm-1">${cd.prix}</td>
+                    <td class="span1">${cd.conducteur.nom} ${cd.conducteur.prenom}</td>
+                </tr>
+                </c:forEach>
+            </table>
 
         <script src="app.js"></script>
         <script async defer
