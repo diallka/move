@@ -41,8 +41,17 @@ public class Conducteur implements Serializable {
     public void setId(Long id) {
         this.id = id;
     }
+
+    public Object getId(long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
      public enum Genre {Mr,Mme; }
-    public enum Disponible {OUI,NON;}
+    public enum Disponible {OUI,NON;
+
+        public static Disponible valueOf(String[] disponibilite) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+    }
     
     private String nom;
     private String prenom;

@@ -34,10 +34,11 @@ public class EspacePersoConducteur extends HttpServlet {
         long id = (long) req.getSession().getAttribute("idCond");
         Conducteur conducteur = new ConducteurService().RecupererUnConducteur(id);
         
+       
+        
         req.setAttribute("cond", conducteur);
-        //String name = req.getUserPrincipal().getName();
-        //Mettre ceci dans la JSP      ${pageContext.request.userPrincipal.name}
-        //long idConducteur = Long.parseLong(req.getParameter("id"));
+        
+       
        
         //Recuperer Commandes d'un conducteur'
         List<Commande>  mesCommandes = new CommandeService().listerCommandesParConducteur(id);
@@ -50,17 +51,21 @@ public class EspacePersoConducteur extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
         //long idReservation = (long) req.getSession().getAttribute("idReservation");
-         long idConducteur = Long.parseLong(req.getParameter("id"));
-        String origine = req.getParameter("origin");
-        String destination = req.getParameter("destination");
-        Conducteur cond = new Conducteur();
-        cond.setId(idConducteur);
+//         long idConducteur = Long.parseLong(req.getParameter("id"));
+//        String origine = req.getParameter("origin");
+//        String destination = req.getParameter("destination");
+//        Conducteur cond = new Conducteur();
+//        cond.setId(idConducteur);
+ 
+       
+         String disponibilite = req.getParameter("disponible");
+
+        long id = (long) req.getSession().getAttribute("idCond");
+        Conducteur conducteur = new ConducteurService().RecupererUnConducteur(id);
+        conducteur.setDisponible(Conducteur.Disponible.valueOf(disponibilite));
+        new ConducteurService().modifierDisponibilite(conducteur);
         
-        Commande cmd = new Commande();
-        cmd.setConducteur(cond);
-        cmd.setAdresse_destination(destination);
-        
-        new CommandeService().creerCommande(cmd);
+        resp.sendRedirect("espace_perso_conducteur");
     }
 
     

@@ -48,11 +48,22 @@
 
 
                 <!--                    DASHBOARD-->
+                 <div style="float: right; margin-top: 5%; margin-right: 5%">
+        <form method="post">
+            <select id="disponible" name="disponible" onchange="this.form.submit();">
+                <option>Etat</option>
+                <option value="OUI">DISPONIBLE</option>
+                <option value="NON">INDISPONIBLE</option>
+            </select>
+        </form>
+    </div>
                 <h2 class="page-header">  <i>Bienvenue</i> ${cond.genre} ${cond.nom} ${cond.prenom}</h2>
                   ${cond.email} <br/>
                   Age: ${cond.age} ans <br/>
                   <a href="accueil">Déconnexion</a>
+                  
         </div>
+                  
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
@@ -185,6 +196,7 @@
         <button id="accepter">Accepter</button> <br/>
         <button id="refuser">Refuser</button>
     </div>
+   
     
     <h3>Historique Commandes</h3>
     <c:forEach items="${cmd}" var="cd">

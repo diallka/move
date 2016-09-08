@@ -44,4 +44,14 @@ public class ConducteurService {
     public Conducteur RecupererUnConducteur(long id) {
         return new ConducteurDAO().RecupererUnConducteur(id);
     }
+
+    public List<Conducteur> ListerConducteursDisponibles() {
+        return new ConducteurDAO().ListerConducteursDisponibles();
+    }
+
+    //Modifier disponiblité conducteur
+    public void modifierDisponibilite(Conducteur conducteur) {
+        ConducteurDAO dao = new ConducteurDAO();
+        dao.modifierDisponibilite(conducteur);
+    }
 }

@@ -17,9 +17,9 @@ import ubber.entity.Conducteur;
  */
 public class ConducteurDAO {
 
-    public List<Conducteur> ListerConducteurs() {
+    public List<Conducteur> ListerConducteursDisponibles() {
         EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-        return em.createQuery("SELECT c FROM Conducteur c").getResultList();
+        return em.createQuery("SELECT c FROM Conducteur c WHERE c.disponible LIKE 'OUI'").getResultList();
     }
 
     public Conducteur RecupererUnConducteur(long id) {
@@ -62,4 +62,13 @@ public class ConducteurDAO {
         return (Conducteur) query.getSingleResult();
     }
     //Fin test...............
+
+    public void modifierDisponibilite(Conducteur conducteur) {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        em.getTransaction().begin();
+        em.merge(conducteur);
+        em.getTransaction().commit();
+    }
+
+    
 }

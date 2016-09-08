@@ -37,6 +37,7 @@ public class Client implements Serializable {
     private Genre genre;
     @Temporal(TemporalType.DATE)
     private Date date_inscription;
+    private String commentaire;
     private String login;
     private String password;
 
@@ -75,6 +76,14 @@ public class Client implements Serializable {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getCommentaire() {
+        return commentaire;
+    }
+
+    public void setCommentaire(String commentaire) {
+        this.commentaire = commentaire;
     }
 
     public String getEmail() {

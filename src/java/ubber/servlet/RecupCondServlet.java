@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.codehaus.jackson.map.ObjectMapper;
 import ubber.dao.ConducteurDAO;
 import ubber.entity.Conducteur;
+import ubber.service.ConducteurService;
 
 
 /**
@@ -32,7 +33,7 @@ public class RecupCondServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-        List<Conducteur> listeCond=new ConducteurDAO().ListerConducteurs();
+        List<Conducteur> listeCond=new ConducteurService().ListerConducteursDisponibles();
         
         String json = new ObjectMapper().writeValueAsString(listeCond);
         
