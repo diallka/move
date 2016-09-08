@@ -58,8 +58,8 @@
         </form>
     </div>
                 <h2 class="page-header">  <i>Bienvenue</i> ${cond.genre} ${cond.nom} ${cond.prenom}</h2>
-                  ${cond.email} <br/>
-                  Age: ${cond.age} ans <br/>
+                  - Email: ${cond.email} <br/>
+                  - Age: ${cond.age} ans <br/>
                   <a href="accueil">Déconnexion</a>
                   
         </div>

@@ -47,45 +47,43 @@
 
         <div id="title">  
             <div style="float: right">
-                - ${clt.email} &nbsp;<br/>
+                - Age: ${clt.age} &nbsp;<br/>
+                - E-mail: ${clt.email} &nbsp;<br/>
                 - ${clt.date_inscription} &nbsp;<br/>
             </div>
-            <h2>Espace personnel Client</h2>
-            Bonjour ${clt.genre} ${clt.nom}<br/>
+            <h2>Espace personnel Client</h2> <br/>
+            <h5>Bonjour ${clt.genre} ${clt.nom}</h5>
             <a href="accueil">Déconnexion</a>
             <br/>
         </div>
 
         <div id="map" > </div><br><br>
         
-        <div id="historique">
-            <h3>Mon historique de commande</h4>
-            <c:forEach items="${cmd}" var="cd">
-                <a href="">${cd.date}</a> <br/>
-                ${cd.adresse_destination}
-                </c:forEach>
+       
+<div id="historique">
+           
              
            
         </div>
 
         <div id="details">
-
+             <div id="reponse" >${reponse}</div>
 
         </div><br><br>
 
         <!-- <div id="panel" style="position: absolute;top: 750px;left: 920px;"></div>-->
-        <div id="reponse" >${reponse}</div>
-
+       
+    <center><h1>Mon historique de commandes</h1></center>
         <table class="table table small">
                 <th>Date</th>
-                <th>Prix</th>
                 <th>Chauffeur</th>
+                <th>Prix</th>
                 <c:forEach items="${cmd}" var="cd">
                 <tr>
-                    <td class="col-md-2">${cd.date}</td>
-                    <td class="col-sm-1">${cd.prix}</td>
-                    <td class="span1">${cd.conducteur.nom} ${cd.conducteur.prenom}</td>
-                </tr>
+                    <td class="col-sm-3">${cd.date}</td>
+                    <td class="col-sm-3">${cd.conducteur.nom} ${cd.conducteur.prenom}</td>
+                    <td class="col-sm-3">${cd.prix}</td>
+                  </tr>
                 </c:forEach>
             </table>
 

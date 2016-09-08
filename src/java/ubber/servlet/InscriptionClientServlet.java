@@ -36,7 +36,7 @@ public class InscriptionClientServlet extends HttpServlet {
         String prenom = req.getParameter("prenom");
         String email = req.getParameter("email");
         String genre = req.getParameter("genre");
-        
+        int age = Integer.parseInt(req.getParameter("age"));
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         
@@ -47,6 +47,7 @@ public class InscriptionClientServlet extends HttpServlet {
         client.setPrenom(prenom);
         client.setEmail(email);
         client.setGenre(Client.Genre.valueOf(genre));
+        client.setAge(age);
         client.setLogin(login);
         client.setPassword(password);
         client.setDate_inscription(new Date());

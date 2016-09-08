@@ -9,16 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Connexion passager</title>
         <link href="CSS/label.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         
         <form method="post">
             <div style="overflow: hidden;" align="center">
-            <a href=""><img src="Images/logo.png" alt="drive commerces"></a>
+<!--            <a href=""><img src="Images/logo.png" alt="drive commerces"></a>-->
+<br/>
+            <center><h2>Connexion passager</h2></center>
             </div>
-            <h2>Se connecter</h2>
+            
             <label for="login">Identifiant</label>
             <input type="text" name="login" /> <br/><br/>
             <label for="pass">Mot de passe</label>

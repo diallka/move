@@ -177,24 +177,25 @@ function detailler(id) {
 
 
 
-        details2 = '<div style="border:1px solid orange;display:inline-block;background-color:orange"><img src="Images/' + objData2.photo + '.png" alt="" />'
-                + '<button onclick="initMap()" style="margin-right="20%">Afficher tous les chauffeurs</button></div><br/><br/>'
-                +'<b>Détails du conducteurs selectionné</b> <br/>'
-                + "Nom:<span style='color:#31B404'> " + objData2.nom + "</span>  Prenom: <span style='color:#31B404'>" + objData2.prenom + "</span><br>"
-                + " Age:<span style='color:red'> " + objData2.age + " ans </span> Date d'inscription:<span style='color:#31B404'> "
+        details2 = 
+                '<button onclick="initMap()" >Afficher tous<br/> les chauffeurs<br/> disponibles</button></div><br/><br/>'
+                +'<div style="display:inline-block"><img src="Images/' + objData2.photo + '.png" alt="" /><br/>'
+                +'<b>Chauffeur selectionné</b> <br/>'
+                + "Nom:<span style='color:#31B404'> " + objData2.nom + "</span> <br/>  Prenom: <span style='color:#31B404'>" + objData2.prenom + "</span><br>"
+                + " Age:<span style='color:red'> " + objData2.age + " ans </span> <br/> Date d'inscription:<span style='color:#31B404'> "
                 + new Date(objData2.date_inscription).getDate() + "/" + (new Date(objData2.date_inscription).getMonth() + 1) + "/"
                 + new Date(objData2.date_inscription).getFullYear() + "</span><br>"
-                + " Auto: <span style='color:orange'> " + objData2.marque_auto + " " + objData2.modele + " </span>" + " Places disponibles: " + objData2.nb_places_dispo
-                + "</br>Note: <span style='color:green'> " + parseInt(objData2.total_notation) / parseInt(objData2.nb_notes) + "/5 </span> "
+//                + " Auto: <span style='color:orange'> " + objData2.marque_auto + " " + objData2.modele + " </span>" + " Places disponibles: " + objData2.nb_places_dispo
+                + "Note: <span style='color:green'> " + parseInt(objData2.total_notation) / parseInt(objData2.nb_notes) + "/5 </span> "
                 + " </br>Prix/Km: " + objData2.prix_km + " euros"
-                 + '</br><h3>Estimez le prix de la course</h3>'
+                 + '</br><h3>Estimez le prix <br/>de la course</h3>'
                 + '<form action="" method="get" name="direction" id="direction"  >'
                 + '<input type="text" name="origin" id="origin" placeholder="Point de départ">'
                 + '<br/><br/><input type="text"  name="destination" id="destination" placeholder="Destination">'
                 + '<br><br><input type="button" class="btn btn-success btn-xs" value="Valider" onclick="calculate('+objData2.prix_km+','+objData2.id+')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn btn-danger btn-xs" type="reset" value="Effacer">'
-                 + '<br><div id="recapitulatif" style="margin-left:50%; margin-top:-17%"></div>'
-                + '</form><br>'
-              
+                 + '<br><div id="recapitulatif" style="margin-left:58%; margin-top:-50%"></div>'
+                + '</form>'
+              //Style recapitulatif
                
 //              + '<br><br><div id="panel"></div>'  affiche le detail du trajet
                
@@ -239,11 +240,12 @@ calculate = function (km, id) {
                 direction.setDirections(response);
                 //Variable prix total
                 prixTotal = Math.ceil((response.routes[0].legs[0].distance.value / 1000) * km)
-                var recap = "<b>Distance: </b> <a><b>" + Math.ceil(response.routes[0].legs[0].distance.value / 1000) + " km</b></a><br />"
+                var recap = '<br/><b>Distance: </b> <a><b>' + Math.ceil(response.routes[0].legs[0].distance.value / 1000) + ' km</b></a><br />'
                         + "<b>Durée: </b> <a><b>" + Math.floor(response.routes[0].legs[0].duration.value / 3600) + " h " + Math.ceil((response.routes[0].legs[0].duration.value % 3600) / 60) + " min </b></a>"
                         + "<br /><b>Prix total: </b> <a><b>" + prixTotal +" euro(s) </b></a>"
-                        + '<br /><br/> <button class="btn btn-info btn-xs" onclick="reserver()">Reserver</button>'
-                        + '&nbsp;&nbsp;<button class="btn btn-info btn-xs" id="payement" onclick="payer('+ id + "," + prixTotal +' )">Payer</button>'
+//                        + '<br /><br/> <button class="btn btn-info btn-xs" onclick="reserver()">Reserver</button>'
+                        +'<br/>'
+                        + '&nbsp;&nbsp;<button class="btn btn-info btn-xs" id="payement" onclick="payer('+ id + "," + prixTotal +' )">&nbsp;&nbsp;&nbsp;Payer&nbsp;&nbsp;&nbsp;</button>'
                         + '<div id="resultpayer"></div>';
                         
                 
@@ -258,6 +260,7 @@ calculate = function (km, id) {
 
 function effacer() {
     $("#details").empty();
+    $('#recapitulatif').empty();
 }
 
 //Reservation************

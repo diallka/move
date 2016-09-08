@@ -29,9 +29,9 @@ public class InscriptionConducteurServlet extends HttpServlet {
         String prenom = req.getParameter("prenom");
         String email = req.getParameter("email");
         String genre = req.getParameter("genre");
+        int age = Integer.parseInt(req.getParameter("age"));
         double longitude = Double.parseDouble(req.getParameter("long"));
         double latitude = Double.parseDouble(req.getParameter("lat"));
-        //String genreFeminin = req.getParameter("FEMME");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
         
@@ -40,8 +40,10 @@ public class InscriptionConducteurServlet extends HttpServlet {
         conducteur.setPrenom(prenom);
         conducteur.setEmail(email);
         conducteur.setGenre(Conducteur.Genre.valueOf(genre));
+        conducteur.setAge(age);
         conducteur.setPosition_longitude(longitude);
         conducteur.setPosition_latitude(latitude);
+        conducteur.setDisponible(Conducteur.Disponible.OUI);
         conducteur.setLogin(login);
         conducteur.setPassword(password);
         conducteur.setDate_inscription(new Date());

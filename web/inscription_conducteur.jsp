@@ -9,16 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <title>Siging up</title>
+         <title>Création compte chauffeur</title>
         <link href="CSS/label.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <div style="float: left; margin-left: 7%; margin-top: 11%">
-        <h1>MOVE A BESOIN <br/><br/>
+        <div style="float: left; margin-left: 7%; margin-top: 5%">
+        <h1>VOUS AVEZ ENTRE<br/><br/>
+            25 ET 45 ANS?<br/><br/>
+            <i>MOVE</i> A BESOIN <br/><br/>
             DE PARTENAIRES <br/><br/>
             COMME VOUS.</h1>
             <p>
-                Gagnez de l'argent en toute simplicité avec Yaobber ! Vous conduisez quand <br/>
+                Gagnez de l'argent en toute simplicité avec <b><i>Move</i></b> ! Vous conduisez quand <br/>
                 vous le souhaitez, vous emmenez les passagers à leur destination et vous <br/>
                 gagnez de l'argent pour chaque trajet. Devenez chauffeur avec Yaobber, <br/>
                 inscrivez-vous maintenant.
@@ -41,11 +43,13 @@
                 <input type="text" name="email"/> <br/><br/>
                 <label for="genre">Sexe</label>
                 <input type="radio" name="genre" value="Mr" checked> M
-                <input type="radio" name="genre" value="Mme"> F<br/><br/>
+                <input type="radio" name="genre" value="Mme"> F 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Age</b>
+                <input type="number" name="age" min="25" max="45" value="25"/><br/><br/>
                 <label for="lat">Lattitude</label>
-                <input type="text" name="lat"/> <br/><br/>
+                <input type="text" name="lat" value="50.639974"/> <br/><br/>
                 <label for="long">Longitude</label>
-                <input type="text" name="long"/> <br/><br/>
+                <input type="text" name="long" value="3.070848"/> <br/><br/>
                 <label for="login">Identifiant</label>
                 <input type="text" name="login"/><br/><br/>
                 <label for="password">Mot de passe</label>

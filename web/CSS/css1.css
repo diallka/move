@@ -15,7 +15,8 @@ body {height: 100%; margin: 0; padding: 0;}
 }
 #details {display:inline-block;height:80%;width:40%;
           position:relative;top:10%;margin-left: 1%}
-#map { display:inline-block;top:5%;height: 70%;box-shadow: 10px 10px 5px #8B8A8A;width: 55%;margin-left:43%; 
+
+#map { display:inline-block;top:5%;height: 60%;box-shadow: 10px 10px 5px #8B8A8A;width: 55%;margin-left:43%; 
 }
 
 

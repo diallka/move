@@ -14,7 +14,7 @@
     </head>
     <body>
         <br/><br/><br/><br/><br/><br/><br/>
-        <h1 style="margin-left: 15%">Connexion</h1>
+      
         <div style="float: left; margin-left: 15%">
             <div style="text-align: center">
                 <h2>Chauffeur</h2>
@@ -23,7 +23,7 @@
             <br/>
             <p>Retrouvez toutes les informations dont vous <br/> 
                 avez besoin pour réussir sur la route.</p>
-            <a href="connexion_conducteur"><button type="button" class="btn btn-default btn-lg active">Connexion chauffeurs</button></a>
+            <a href="connexion_conducteur"><button type="button" class="btn btn-default btn-lg active">Connexion &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chauffeurs</button></a>
 
         </div>
         <div style="float: right; margin-right: 15%; ">
@@ -34,7 +34,7 @@
             <br/>
             <p>Gérez vos options de paiement, parcourez  <br/>
                 l'historique de vos courses et bien plus encore.</p>
-            <a href="connexion_client"><button type="button" class="btn btn-default btn-lg active">Connexion passagers</button></a>
+            <a href="connexion_client"><button type="button" class="btn btn-default btn-lg active">Connexion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Passagers</button></a>
 
         </div>
     </body>
