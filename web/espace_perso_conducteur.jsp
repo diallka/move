@@ -12,7 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>SB Admin 2 - Bootstrap Admin Theme</title>
+        <title>Espace Personnel Chauffeur</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,180 +43,66 @@
         <div id="wrapper">
 
             <!-- Navigation -->
-            
+
             <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
 
 
                 <!--                    DASHBOARD-->
-                 <div style="float: right; margin-top: 5%; margin-right: 5%">
-        <form method="post">
-            <select id="disponible" name="disponible" onchange="this.form.submit();">
-                <option>Etat</option>
-                <option value="OUI">DISPONIBLE</option>
-                <option value="NON">INDISPONIBLE</option>
-            </select>
-        </form>
-    </div>
+                <div style="float: right; margin-top: 5%; margin-right: 5%">
+                    <form method="post">
+                        <select id="disponible" name="disponible" onchange="this.form.submit();">
+                            <option>Etat</option>
+                            <option value="OUI" >DISPONIBLE</b></option>
+                            <option value="NON">INDISPONIBLE</option>
+                        </select>
+                    </form>
+                </div>
                 <h2 class="page-header">  <i>Bienvenue</i> ${cond.genre} ${cond.nom} ${cond.prenom}</h2>
-                  - Email: ${cond.email} <br/>
-                  - Age: ${cond.age} ans <br/>
-                  <a href="accueil">Déconnexion</a>
-                  
-        </div>
-                  
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
-    <div class="row">
-           <!--                    Debut panneau commentaire-->
-        <div class="col-lg-3 col-md-6">
+                <img src="Images/${cond.photo}.png"/> <br/>
+                - Email: ${cond.email} <br/>
+                - Age: ${cond.age} ans <br/>
 
-         
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-comments fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
-                            <div class="huge">26</div>
-                            <div>New Comments!</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">
-                    <div class="panel-footer">
-                        <span class="pull-left">View Details</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-
-                <!--                        Fin commentaire-->
-            </div>
-        </div>
-           
-           
-          <!--                    Debut panneau commentaire-->
-        <div class="col-lg-3 col-md-6">
-
-         
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-comments fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
-                            <div class="huge">26</div>
-                            <div>New Comments!</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">
-                    <div class="panel-footer">
-                        <span class="pull-left">View Details</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-
-                <!--                        Fin commentaire-->
-            </div>
-        </div>
-          
-          
+                <a href="accueil">DECONNEXION</a>
                 
-          <!--                    Debut panneau commentaire-->
-        <div class="col-lg-3 col-md-6">
 
-         
-            <div class="panel panel-danger">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-comments fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
-                            <div class="huge">26</div>
-                            <div>New Comments!</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">
-                    <div class="panel-footer">
-                        <span class="pull-left">View Details</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
 
-                <!--                        Fin commentaire-->
-            </div>
         </div>
 
-          
-          
-          
-                  
-          <!--                    Debut panneau commentaire-->
-        <div class="col-lg-3 col-md-6">
-
-         
-            <div class="panel panel-green">
-                <div class="panel-heading">
-                    <div class="row">
-                        <div class="col-xs-3">
-                            <i class="fa fa-comments fa-5x"></i>
-                        </div>
-                        <div class="col-xs-9 text-right">
-                            <div class="huge">26</div>
-                            <div>New Comments!</div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#">
-                    <div class="panel-footer">
-                        <span class="pull-left">View Details</span>
-                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-
-                <!--                        Fin commentaire-->
-            </div>
-        </div>
     </div>
 
 
- 
-    <h1>Id conducteur</h1>
-    
-    <div>
-        <button id="accepter">Accepter</button> <br/>
-        <button id="refuser">Refuser</button>
-    </div>
-   
-    
+
     <h3>Historique Commandes</h3>
-    <c:forEach items="${cmd}" var="cd">
-        ${cd.date} ${cd.client.nom} ${cd.client.prenom} <br/>
-    </c:forEach>
-<!-- jQuery -->
-<script src="vendor/jquery/jquery.min.js"></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <table class="table table small">
+        <th>Date</th>
+        <th>Chauffeur</th>
+        <th>Prix</th>
+            <c:forEach items="${cmd}" var="cd">
+            <tr>
+                <td class="col-sm-3">${cd.date}</td>
+                <td class="col-sm-3">${cd.conducteur.nom} ${cd.conducteur.prenom}</td>
+                <td class="col-sm-3">${cd.prix}</td>
+            </tr>
+        </c:forEach>
+    </table>
+    <button style="margin-left: 70%; color: white; background-color: green"><h3> Total des gains:${cmdPrix} euros</h3></button>
 
-<!-- Metis Menu Plugin JavaScript -->
-<script src="vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
 
-<!-- Morris Charts JavaScript -->
-<script src="vendor/raphael/raphael.min.js"></script>
-<script src="vendor/morrisjs/morris.min.js"></script>
-<script src="data/morris-data.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="dist/js/sb-admin-2.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="vendor/raphael/raphael.min.js"></script>
+    <script src="vendor/morrisjs/morris.min.js"></script>
+    <script src="data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
 </body>
 </html>

@@ -53,4 +53,11 @@ public class CommandeDAO {
 //
 //    }
 
+    public List <Commande> recupererPrixTotal(long id) {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        return em.createQuery("SELECT   SUM(c.prix)  FROM Commande c where c.conducteur.id =:idCond")
+                .setParameter("idCond", id)
+                .getResultList();
+    }
+
 }

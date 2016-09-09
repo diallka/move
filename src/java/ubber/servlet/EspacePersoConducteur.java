@@ -44,6 +44,9 @@ public class EspacePersoConducteur extends HttpServlet {
         List<Commande>  mesCommandes = new CommandeService().listerCommandesParConducteur(id);
         req.setAttribute("cmd", mesCommandes);
         
+        List<Commande> commandes = new CommandeService().recupererPrixTotal(id);
+        req.setAttribute("cmdPrix", commandes);
+        
         req.getRequestDispatcher("espace_perso_conducteur.jsp").forward(req, resp);
     }
 
@@ -62,6 +65,7 @@ public class EspacePersoConducteur extends HttpServlet {
 
         long id = (long) req.getSession().getAttribute("idCond");
         Conducteur conducteur = new ConducteurService().RecupererUnConducteur(id);
+       
         conducteur.setDisponible(Conducteur.Disponible.valueOf(disponibilite));
         new ConducteurService().modifierDisponibilite(conducteur);
         

@@ -7,6 +7,7 @@ package ubber.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -67,8 +68,15 @@ public class EspacePersoClientServlet extends HttpServlet {
         cmd.setClient(client);
         cmd.setPrix(prix);
         cmd.setAdresse_destination(destination);
-        cmd.setDate(new Date());
+        DateFormat shortDateFormat = DateFormat.getDateTimeInstance(
+      
+        DateFormat.SHORT,
 
+        DateFormat.SHORT);
+        Date now = new Date();
+        shortDateFormat.format(now);
+        cmd.setDate(now);
+        
         new CommandeService().creerCommande(cmd);
     }
 

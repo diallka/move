@@ -38,6 +38,11 @@ public class CommandeService {
 //    public Commande recupererUneCommande(long id) {
 //        return new CommandeDAO().recupererUneCommande();
 //    }
+
+    //Recuperer total gain conducteur
+    public List<Commande> recupererPrixTotal(long id) {
+        return new CommandeDAO().recupererPrixTotal(id);
+    }
    
     
 }

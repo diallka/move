@@ -77,10 +77,10 @@ function initMap() {
                         + '</form>'
             });
 
-            addMarker.addListener('mouseover', function () {
+            addMarker.addListener('click', function () {
                 infowindow.open(map, addMarker);
             });
-
+           
 
             details = details + '<div style="border:1px solid orange;display:inline-block;background-color:orange"><img src="Images/' + value.photo + '.png" alt="" /></div><br>'
                     + "Nom:<span style='color:#31B404'> " + value.nom + "</span>  Prenom: <span style='color:#31B404'>" + value.prenom + "</span><br>"
@@ -193,7 +193,7 @@ function detailler(id) {
                 + '<input type="text" name="origin" id="origin" placeholder="Point de départ">'
                 + '<br/><br/><input type="text"  name="destination" id="destination" placeholder="Destination">'
                 + '<br><br><input type="button" class="btn btn-success btn-xs" value="Valider" onclick="calculate('+objData2.prix_km+','+objData2.id+')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="btn btn-danger btn-xs" type="reset" value="Effacer">'
-                 + '<br><div id="recapitulatif" style="margin-left:58%; margin-top:-50%"></div>'
+                 + '<br><div id="recapitulatif" style="margin-left:58%; margin-top:-47%"></div>'
                 + '</form>'
               //Style recapitulatif
                

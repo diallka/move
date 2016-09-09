@@ -103,14 +103,14 @@
 
                     <h3>Une activité qui s'adapte à vos besoins
                         Vous êtes votre propre patron et conduisez quand vous le souhaitez</h3>
-                    <p style="font-size: 20px">Fonctionnement Une journée au volant Lorsque vous êtes prêt 
+                    <p style="font-size: 20px">Fonctionnement d'une journée au volant: <br/> Lorsque vous êtes prêt 
                         à prendre la route, ouvrez l'application : vous commencerez 
                         à recevoir des demandes de courses. Nous vous indiquons votre 
                         passager et vous guidons vers le lieu de prise en charge, puis 
                         vers la destination de votre passager. Une fois la course terminée, 
                         nous recherchons une nouvelle commande à proximité. Vous pouvez choisir 
                         de faire une pause ou de terminer votre journée quand vous le souhaitez, 
-                        simplement en fermant l'application.</p>
+                        simplement en sélectionnant <b style="color: red">Indisponible</b> .</p>
                     
                     
 

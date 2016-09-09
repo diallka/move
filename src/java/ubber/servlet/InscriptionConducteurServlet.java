@@ -47,7 +47,11 @@ public class InscriptionConducteurServlet extends HttpServlet {
         conducteur.setLogin(login);
         conducteur.setPassword(password);
         conducteur.setDate_inscription(new Date());
-        
+        String photo = "conducteur1";
+        if (Conducteur.Genre.valueOf(genre).equals("Mr")){
+            conducteur.setPhoto(photo);
+        }
+ 
         new ConducteurService().inscription(conducteur);
         
         resp.sendRedirect("connexion_conducteur");
